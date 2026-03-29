@@ -36,7 +36,7 @@ def score_resume(text):
     return score, found_skills
 
 # Process button
-if st.button("🔍 Screen Resumes"):
+if st.button("Screen Resumes"):
     results = []
 
     if uploaded_files and REQUIRED_SKILLS:
@@ -53,7 +53,7 @@ if st.button("🔍 Screen Resumes"):
         # Sort results
         results.sort(key=lambda x: x["score"], reverse=True)
 
-        st.subheader("📊 Results")
+        st.subheader("Results")
 
         for i, res in enumerate(results, start=1):
             st.write(f"**{i}. {res['name']}**")
